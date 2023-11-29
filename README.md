@@ -62,7 +62,7 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
 
 <br>
 
-A API estará executando em [http://localhost:8080](http://localhost:8080).
+A API estará executando em [http://localhost:8000](http://localhost:8000).
 
 <br>
 
