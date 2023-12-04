@@ -40,7 +40,7 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
     cp .env.example .env
     ```
 
-4. Configure as variáveis de ambiente no arquivo `.env` com as informações adequadas, incluindo a configuração do banco de dados.
+4. Configure as variáveis de ambiente no arquivo `.env` com as informações adequadas, incluindo a configuração do banco de dados. Certifique-se de ter o certificado SSL do banco de dados baixado no seu dispositivo.
 
 5. Gere a chave de aplicativo:
 
