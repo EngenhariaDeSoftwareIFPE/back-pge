@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
@@ -15,9 +14,8 @@ use App\Http\Controllers\StudentController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::middleware('auth:sanctum')->group(function(){
-    Route::put('/password-student/{student}', [StudentController::class, 'updatePassword'])->middleware('ability:student');
-});
+
+Route::put('/password-student/{student}', [StudentController::class, 'updatePassword']);
 
 Route::apiResource('students', StudentController::class);
 

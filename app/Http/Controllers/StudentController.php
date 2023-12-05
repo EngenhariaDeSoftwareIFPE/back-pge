@@ -12,21 +12,12 @@ use Illuminate\Support\Facades\Validator;
 class StudentController extends Controller
 {
     use HttpResponses;
-    
-    public function __construct()
-    {
-        $this->middleware('auth:sanctum')->except(['store']);
-    }
 
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        if (!auth()->user()->tokenCan('signatory')){
-            return $this->error('Unauthorized', 403);
-        }
-
         return StudentResource::collection(Student::all());
     }
 
@@ -87,10 +78,6 @@ class StudentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        if (!auth()->user()->tokenCan('student')){
-            return $this->error('Unauthorized', 403);
-        }
-
         $validator = Validator::make($request->all(), [
             'matricula' => 'required',
             'nome' => 'required',
@@ -127,10 +114,6 @@ class StudentController extends Controller
      */
     public function destroy(string $id)
     {
-        if (!auth()->user()->tokenCan('student')){
-            return $this->error('Unauthorized', 403);
-        }
-
         $deleted = Student::where('matricula', $id)->delete();
 
         if ($deleted) {
@@ -142,10 +125,6 @@ class StudentController extends Controller
 
     public function updatePassword(Request $request, string $id)
     {
-        if (!auth()->user()->tokenCan('student')){
-            return $this->error('Unauthorized', 403);
-        }
-        
         // Verifique se a senha antiga fornecida é válida
         $student = Student::where('matricula', $id)->first();
 
