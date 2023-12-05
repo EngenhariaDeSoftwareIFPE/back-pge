@@ -25,7 +25,8 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
 1. Clone o repositório:
 
     ```bash
-    git clone https://github.com/EngenhariaDeSoftwareIFPE/back-pge.git
+    git init
+    git remote add origin https://github.com/EngenhariaDeSoftwareIFPE/back-pge.git
     ```
 
 2. Instale as dependências do Composer:
