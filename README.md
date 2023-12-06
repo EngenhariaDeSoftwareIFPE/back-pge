@@ -67,10 +67,6 @@ A API estará executando em [http://localhost:8000](http://localhost:8000).
 
 <br>
 
-## Uso
-
-Para melhor visualização do uso e do funcionamento da API, tanto quanto suas rotas, consulte a documentação técnica feita pelo Swagger.
-
 <div align='right'>
     <br><br><br>
     <img src='public/pge1.png'>
